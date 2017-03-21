@@ -1,16 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
 import App from './App';
+import IndexPage from './components/IndexPage';
+import Dashboard from './components/Dashboard';
+import NoMatch from './components/NoMatch';
 
-ReactDOM.render(
-  <Router onUpdate={() => window.scrollTo(0, 0)}>
-    <Route path='/' component={App} />
-    {/* <Route path='/register' component={RegisterPage} />
-      <Route path='/change' component={ChangePasswordPage} />
-      <Route path='/forgot' component={ResetPasswordPage} />
-      <Route path='/contact' component={ContactPage} />
-    <Route path='/about' component={AboutPage} /> */}
-  </Router>,
+render((
+  <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
+    <Route component={App}>
+      <Route path="/" component={IndexPage}/>
+      <Route path="/dashboard" component={Dashboard}/>
+      {/* <Route path="users" component={Users}>
+        <Route path="/user/:userId" component={User}/>
+      </Route>*/}
+      <Route path="*" component={NoMatch}/>
+    </Route>
+  </Router>),
   document.getElementById('root')
 );

@@ -33,7 +33,7 @@ export default class Footer extends React.Component {
         </div>
         <div className="footer-copyright">
           <div className="container">
-            Made by <a className="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            Made by <a className="brown-text text-lighten-3" href="#">HuynhDN</a>
           </div>
         </div>
       </footer>

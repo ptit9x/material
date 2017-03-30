@@ -5,52 +5,33 @@ export default class Dashboard extends React.Component {
   render() {
     return (
         <div className="dashboard row">
-          <div className="col s3">
-            <ul className="collapsible" data-collapsible="accordion">
-              <li>
-                <div className="collapsible-header">
-                  <span class="new badge">4</span>
-                  <i className="material-icons">filter_drama</i>First</div>
-                <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-              </li>
-              <li>
-                <div className="collapsible-header">
-                  <span className="badge">1</span>
-                  <i className="material-icons">place</i>Second</div>
-                <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-              </li>
+          <div className="col l3 m3 s6">
+            <ul className="table-of-contents">
+              <li><a href="#" className="active">Download</a></li>
+              <li><a href="#">Setup</a></li>
+              <li><a href="#">Templates</a></li>
+              <li><a href="#">Third-party Options</a></li>
+              <li><a href="#">Sass</a></li>
             </ul>
           </div>
-          <div className="col s3">
-            <ul className="collection">
-              <li className="collection-item avatar">
-                <img src="images/yuna.jpg" alt="" className="circle" />
-                <span className="title">Title</span>
-                <p>First Line </p>
-                <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-              </li>
-              <li className="collection-item avatar">
-                <i className="material-icons circle">folder</i>
-                <span className="title">Title</span>
-                <p>First Line </p>
-                <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-              </li>
-              <li className="collection-item avatar">
-                <i className="material-icons circle green">insert_chart</i>
-                <span className="title">Title</span>
-                <p>First Line</p>
-                <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-              </li>
-              <li className="collection-item avatar">
-                <i className="material-icons circle red">play_arrow</i>
-                <span className="title">Title</span>
-                <p>First Line </p>
-                <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-              </li>
-            </ul>
+          <div className="col l3 m3 s6">
+            <div className="row">
+              <div className="col s12">
+                <ul className="tabs">
+                  <li className="tab col s6"><a href="#test1">Messager</a></li>
+                  <li className="tab col s6"><a className="active" href="#test2">Voice</a></li>
+                </ul>
+                <a className="btn-floating">
+                  <i className="material-icons">add</i>
+                </a>
+                Buy a phone
+              </div>
+              <div id="test1" className="col s12">Test 1</div>
+              <div id="test2" className="col s12">Test 2</div>
+            </div>
           </div>
-          <div className="col s6">
-
+          <div className="col l6 m6 s12">
+            chat area
           </div>
         </div>
     );

@@ -1,17 +1,33 @@
 import {Link} from 'react-router';
 import React from 'react';
+import axios from 'axios';
 
 export default class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      posts: []
+    }
+  }
+
+  componentDidMount() {
+    axios.get(`https://morephoneservices.herokuapp.com/api/messagers/+17606215500`)
+      .then(res => {
+        const posts = res.data.map(obj => obj);
+        this.setState({ posts });
+      });
+  }
+
   render() {
     return (
         <div className="dashboard row">
           <div className="col l3 m3 s6">
             <ul className="table-of-contents">
               <li><a href="#" className="active">Download</a></li>
-              <li><a href="#">Setup</a></li>
-              <li><a href="#">Templates</a></li>
-              <li><a href="#">Third-party Options</a></li>
-              <li><a href="#">Sass</a></li>
+              {this.state.posts.map(post =>
+                <li <a href="#" key={post.sid}>{post.body}</a></li>
+              )}
             </ul>
           </div>
           <div className="col l3 m3 s6">

@@ -73,16 +73,18 @@ nav .brand-logo {
 .table-of-contents a.active {
   border-left: 2px solid #0f9d58;
 }
-a.avatar img {
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-}
 a.avatar span {
   margin: 0 10px;
 }
 .teal-text.text-lighten-2 {
     color: #0f9d58 !important;
+}
+
+.incoming_phone {
+  width: 260px;
+  float: left;
+}
+.box_tabs {
+  width: 300px;
+  float: left;
 }

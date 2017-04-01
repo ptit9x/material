@@ -14,8 +14,8 @@ export default class Header extends React.Component {
           <ul className="right hide-on-med-and-down">
             <li>
               <a className="avatar">
-                <img src="http://materializecss.com/images/yuna.jpg" alt="" className="circle" />
-                <span class="title">HuynhDN</span>
+                <img src="http://materializecss.com/images/yuna.jpg" alt="" className="btn btn-floating" />
+                <span className="title">HuynhDN</span>
               </a>
             </li>
           </ul>
@@ -23,8 +23,8 @@ export default class Header extends React.Component {
           <ul id="nav-mobile" className="side-nav">
             <li>
               <a className="avatar">
-                <img src="http://materializecss.com/images/yuna.jpg" alt="" className="circle" />
-                <span class="title">HuynhDN</span>
+                <img src="http://materializecss.com/images/yuna.jpg" alt="" className="btn btn-floating" />
+                <span className="title">HuynhDN</span>
               </a>
             </li>
             <li className="active"><a href="/">Home</a></li>
